@@ -1,0 +1,103 @@
+#containerFooter {
+    background-color: black;
+    height: 553px;
+    display: flex;
+
+    #infos {
+        width: 65%;
+        height: 100%;
+        color: white;
+        font-size: 25px;
+        padding-left: 5%;
+        
+
+        .title {
+            height: 20%;
+            display: flex;
+            align-items: center;
+            
+        }
+
+        #input {
+            width: 90%;
+        }
+
+        #stack {
+            display: flex;
+            flex-direction: column;
+            height: 50%;
+            width: 90%;
+          
+            justify-content: flex-end;
+
+            #mentions {
+                font-size: 20px;
+                display: flex;
+                justify-content: space-between;
+                height: 60%;
+             
+                width: 52%;
+
+                .item {
+                    display: flex;
+                    flex-direction: column;
+                    height: 80%;
+
+                }
+            }
+            #politique {
+                font-size: 15px;
+                color: grey;
+                height: 30%;
+             
+                
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+                .itemConditions {
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+        }
+
+        #medias {
+            display: flex;
+            justify-content: space-between;
+            width: 90%;
+
+            .reseaux {
+                display: flex;
+                align-items: center;
+
+                img {
+                    width: 40px;
+                }
+
+            }
+        }
+
+    }
+
+    #contacts {
+        width: 35%;
+        color: white;
+        font-size: 25px;
+        
+        
+
+        .title {
+            height: 20%;
+            display: flex;
+            align-items: center;
+            padding-left: 10%;
+        }
+
+        #list {
+            height: 80%;
+            background-color: grey;
+        }
+
+    }
+}

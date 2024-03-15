@@ -1,0 +1,208 @@
+.dashboard {
+    background-color: #111820;
+    height: 100vh;
+
+    .headContainer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.5% 2%;
+        border-bottom: 1px solid rgba(105, 105, 105, 0.30);
+
+
+        h2 {
+            margin: 0;
+            color: var(--Color, #FFF);
+            font-family: "Techna Sans";
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .download {
+            color: var(--Color, #FFF);
+            text-align: right;
+            font-feature-settings: 'clig' off, 'liga' off;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+
+            img {
+                width: 20px
+            }
+
+
+        }
+
+    }
+
+    .graphique {
+        border-radius: 30px;
+        background-color: #171E28;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        height: 87%;
+        margin: 1%;
+
+        .hearderGraphique {
+            width: 100%;
+            padding: 2.5%;
+           
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 40px;
+            color: rgba(0, 0, 0, 0.60);
+            font-feature-settings: 'clig' off, 'liga' off;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            color: var(--Color, #FFF);
+        }
+
+        .legendeGraphique {
+
+            h3 {
+                padding-left: 0%;
+                margin: 0 0 1% 0;
+                width: 10%;
+                margin-left: 30px;
+                color: #000;
+                font-feature-settings: 'clig' off, 'liga' off;
+                font-family: Helvetica Neue;
+                font-size: 30px;
+                font-style: italic;
+                font-weight: 700;
+                color: white;
+                text-align: right;
+                font-feature-settings: 'clig' off, 'liga' off;
+                font-family: Helvetica Neue;
+                font-size: 25px;
+                font-style: italic;
+                font-weight: 900;
+                line-height: 18px;
+            }
+            .separator{
+                margin-left: 3.6%;
+                margin-bottom: 0.5%;
+                width: 10%;
+                border-top: 2px solid grey;
+                height: 2px;
+            }
+
+            .toggleList {
+                height: 160px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                margin-left: 30px;
+                font-size: 22px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                color: var(--Color, #FFF);
+
+                .form-switch {
+                    display: inline-block;
+                    cursor: pointer;
+                    -webkit-tap-highlight-color: transparent;
+                }
+
+                .form-switch i {
+                    position: relative;
+                    display: inline-block;
+                    margin-right: .5rem;
+                    width: 51px;
+                    height: 18px;
+                    background-color: #111820;
+                    border-radius: 23px;
+                    vertical-align: text-bottom;
+                    transition: all 0.3s linear;
+                }
+
+                .form-switch i::before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    width: 47px;
+                    height: 18px;
+                    background-color: #595758;
+                    border-radius: 11px;
+                    transform: translate3d(2px, 0px, 0) scale3d(1, 1, 1);
+                    transition: all 0.25s linear;
+                }
+
+                .form-switch i::after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    width: 18px;
+                    height: 18px;
+                    background-color: #fff;
+                    border-radius: 11px;
+                    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.24);
+                    transform: translate3d(2px, 0px, 0);
+                    transition: all 0.2s ease-in-out;
+                }
+
+                .form-switch:active i::after {
+                    width: 28px;
+                    transform: translate3d(2px, 0px, 0);
+                }
+
+                .form-switch:active input:checked+i::after {
+                    transform: translate3d(16px, 0px, 0);
+                }
+
+                .form-switch input {
+                    display: none;
+                }
+
+                .form-switch input:checked+i {
+                    background-color: #4BD763;
+                }
+
+                .form-switch input:checked+i::before {
+                    transform: translate3d(18px, 0px, 0) scale3d(0, 0, 0);
+                }
+
+                .form-switch input:checked+i::after {
+                    transform: translate3d(33px, 0px, 0);
+                }
+
+                .toggle1 .form-switch input:checked+i {
+                    background-color: rgba(218, 0, 0, 0.70)
+                }
+
+                .toggle2 .form-switch input:checked+i {
+                    background-color: rgba(0, 67, 198, 0.70)
+                }
+
+                .toggle3 .form-switch input:checked+i {
+                    background-color: rgba(0, 198, 20, 0.70)
+                }
+
+                .toggle4 .form-switch input:checked+i {
+                    background-color: rgba(187, 0, 168, 0.70)
+                }
+
+                .toggle5 .form-switch input:checked+i {
+                    background-color: rgba(240, 159, 0, 0.70)
+                }
+            }
+        }
+
+        .vraiGraphique {
+            
+            height: 57%;
+
+            text {
+                color: white;
+
+            }
+        }
+
+    }
+}

@@ -1,0 +1,41 @@
+#header {
+    //background-color: white;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 100vw;
+    height: 80px;
+    align-items: center;
+    box-shadow: grey 5px;
+    
+
+    #left {
+        width: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        #logo {
+            width: 40px;   
+        }
+        span {
+            color: white;
+            font-weight: 700;
+            font-size: 30px;
+        }
+
+    }
+
+    #right {
+        display: flex;
+        align-items: center;
+        padding-right: 3%;
+
+        img {
+            width: 40px;
+        }
+    }
+
+    
+
+
+}

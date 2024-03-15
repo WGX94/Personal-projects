@@ -1,0 +1,83 @@
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: black;
+  width: 100%;
+  height: 138px;
+}
+#header #container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 110px;
+  padding-top: 1.62%;
+}
+#header #menuLeft {
+  display: flex;
+  flex-direction: row;
+  width: 300px;
+}
+#header #menuLeft #reseaux {
+  height: auto;
+}
+#header #menuLeft #reseaux .liens {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 220px;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+#header #menuLeft #reseaux .liens > li {
+  height: 22px;
+  display: flex;
+  align-items: center;
+}
+#header #menuLeft #reseaux .liens > li > a {
+  height: 22px;
+  display: flex;
+  align-items: center;
+}
+#header #menuLeft #reseaux .liens > li > a .images {
+  width: 20px;
+}
+#header #menuLeft #kids {
+  height: 22px;
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  border-left: 1px solid #48494A;
+}
+#header #menuLeft #kids > a {
+  display: flex;
+  align-items: center;
+}
+
+#menuRight {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+}
+#menuRight .compte {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 300px;
+}
+#menuRight .compte > li {
+  height: 22px;
+  display: flex;
+  align-items: center;
+}
+#menuRight .compte > li > a {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+#menuRight .compte > li > a .images {
+  width: 20px;
+}
+
+/*# sourceMappingURL=main.css.map */

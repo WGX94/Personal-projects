@@ -1,0 +1,40 @@
+
+#menuVertical {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    left: 0;
+    top: 61px;
+    background-color: $navColor;
+    width: 64px;
+    height: 100%;
+    z-index: 1;
+
+    #profil {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;    
+    }
+
+    .mainMenuVertical {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .tailleIcon {
+            height: 40px;
+
+            .iconGauche {
+                display: flex;
+                justify-content: center;
+                margin-top: 5px;
+
+                img {
+                    width: 16px;
+                }
+            }   
+        }
+    }
+}
+

@@ -1,0 +1,28 @@
+.scroll {
+    position: relative;
+    overflow: hidden;
+
+    .scroll_inner::after {
+        content: '';
+        clear: both;
+        display: table;
+
+    }
+
+    .scroll-slide {
+        float: left;
+    }
+}
+
+.scroll__next, .scroll__prev {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: white url(../../assets/icons/rightArrow_icon.svg) center center no-repeat;
+    background-size: 20px 20px;
+    border-radius: 50px;
+    top: 50%;
+    margin-top: -20px;
+    right: -20px;
+    cursor: pointer;
+}

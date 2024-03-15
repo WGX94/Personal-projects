@@ -1,0 +1,345 @@
+#header #headerRight .menuHorizontal ul, #header div, #header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#header #headerRight {
+  display: flex;
+  justify-content: space-between;
+}
+
+#header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 0 10px;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  z-index: 1;
+}
+#header #headerRight {
+  width: 800px;
+}
+#header #headerRight .borderRight {
+  border-right: 1px solid #E5DBDB;
+  padding-right: 30px;
+  height: 30px;
+}
+#header #headerRight #cliquable :hover {
+  color: #3C8E9A;
+}
+#header #headerRight #iconMessage {
+  align-items: center;
+}
+#header #headerRight #faq {
+  padding-left: 5px;
+  text-decoration: none;
+  text-transform: none;
+  font-family: "Yantramanav", sans-serif;
+  color: black;
+}
+#header #headerRight a {
+  align-items: center;
+}
+#header #headerRight .borderRight span {
+  font-family: "Yantramanav", sans-serif;
+}
+#header #headerRight #barreProgression {
+  width: 30px;
+  height: 30px;
+  border: 2px solid #E1D9FF;
+  border-radius: 50%;
+  padding: 5px 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6840F8;
+}
+#header #headerRight .menuHorizontal ul {
+  width: 150px;
+  padding-left: 0;
+  margin-right: 20px;
+  list-style: none;
+}
+
+#menuVertical {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  left: 0;
+  top: 61px;
+  background-color: #31486A;
+  width: 64px;
+  height: 100%;
+}
+#menuVertical #profil {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+#menuVertical .mainMenuVertical {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#menuVertical .mainMenuVertical .tailleIcon {
+  height: 40px;
+}
+#menuVertical .mainMenuVertical .tailleIcon .iconGauche {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+}
+#menuVertical .mainMenuVertical .tailleIcon .iconGauche img {
+  width: 16px;
+}
+
+body {
+  background-color: #EEF8F9;
+}
+body #hero {
+  display: flex;
+  justify-content: space-around;
+}
+body #hero .container {
+  margin-left: 64px;
+  margin-top: 94px;
+  display: flex;
+  width: 1221px;
+  flex-direction: column;
+}
+body #hero .container #navBar {
+  display: flex;
+  justify-content: space-around;
+  width: 1221px;
+  height: 40px;
+  margin-bottom: 10px;
+  background-color: white;
+}
+body #hero .container #navBar a {
+  display: flex;
+  align-items: center;
+  height: 40px;
+}
+body #hero .container #navBar div:hover {
+  width: 275px;
+  border-bottom: 1px solid #5EBAC8;
+}
+body #hero .container #navBar div {
+  width: 275px;
+}
+body #hero .container #navBar div a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body #hero .container #navBar div a span {
+  display: flex;
+  justify-content: center;
+  color: #5EBAC8;
+  font-size: 15px;
+}
+body #hero .container #cheminRelatif {
+  width: 100%;
+  height: 30px;
+  background-color: #5EBAC8;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+body #hero .container #titreHero {
+  width: 695px;
+}
+body #hero .container #titreHero h3 {
+  color: #5EBAC8;
+  text-transform: uppercase;
+}
+body #hero .container #titreHero p {
+  font-size: 30px;
+}
+body #hero .container #titreHero p span {
+  font-weight: 500;
+  font-size: 40px;
+}
+body #hero .container #contenu {
+  display: flex;
+  justify-content: center;
+}
+body #hero .container #contenu #blockDefi1 {
+  border: 6px solid rgba(252, 182, 48, 0.86);
+  border-radius: 15px;
+  height: 412px;
+  width: 924px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  margin-top: 100px;
+  margin-bottom: 140px;
+}
+body #hero .container #contenu #blockDefi1 #coin {
+  position: absolute;
+  top: 300px;
+  left: -250px;
+}
+body #hero .container #contenu #blockDefi1 #ticket {
+  position: absolute;
+  bottom: 360px;
+  right: -100px;
+}
+body #hero .container #contenu #blockDefi1 #defi {
+  margin: 39px 0 0 39px;
+  width: 158px;
+  height: 55px;
+  background-color: rgba(252, 182, 48, 0.86);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+}
+body #hero .container #contenu #blockDefi1 #defi > span {
+  color: white;
+  font-weight: 500;
+  font-size: 30px;
+}
+body #hero .container #contenu #blockDefi1 #nbEvent {
+  margin: 0 39px 94px 39px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body #hero .container #contenu #blockDefi1 #nbEvent .exercice {
+  width: 269px;
+  height: 186.75px;
+}
+body #hero .container #contenu #blockDefi1 #nbEvent .exercice a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+}
+body #hero .container #contenu #blockDefi1 #nbEvent .exercice a .blockImage {
+  height: 136.94px;
+}
+body #hero .container #contenu #blockDefi1 #nbEvent .exercice a .blockImage .imageExercice {
+  width: 269px;
+  height: 136.94px;
+}
+body #hero .container #contenu #blockDefi1 #nbEvent .exercice a .titreDefi {
+  height: 45px;
+  background-color: rgba(252, 182, 48, 0.86);
+  display: flex;
+  align-items: center;
+}
+body #hero .container #contenu #blockDefi1 #nbEvent .exercice a .titreDefi h3 {
+  margin: 0;
+  margin-left: 20px;
+}
+body #hero .container #contenu #blockDefi2 {
+  border: 6px solid #8DC87B;
+  border-radius: 15px;
+  height: 412px;
+  width: 1212px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+body #hero .container #contenu #blockDefi2 #defi {
+  margin: 39px 0 0 39px;
+  width: 158px;
+  height: 55px;
+  background-color: #8DC87B;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+}
+body #hero .container #contenu #blockDefi2 #defi > span {
+  color: white;
+  font-weight: 500;
+  font-size: 30px;
+}
+body #hero .container #contenu #blockDefi2 #nbEvent {
+  margin: 0 39px 94px 39px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body #hero .container #contenu #blockDefi2 #nbEvent .exercice {
+  width: 269px;
+  height: 186.75px;
+}
+body #hero .container #contenu #blockDefi2 #nbEvent .exercice a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+}
+body #hero .container #contenu #blockDefi2 #nbEvent .exercice a .blockImage {
+  height: 136.94px;
+}
+body #hero .container #contenu #blockDefi2 #nbEvent .exercice a .blockImage .imageExercice {
+  width: 269px;
+  height: 136.94px;
+}
+body #hero .container #contenu #blockDefi2 #nbEvent .exercice a .titreDefi {
+  height: 45px;
+  background-color: #8DC87B;
+  display: flex;
+  align-items: center;
+}
+body #hero .container #contenu #blockDefi2 #nbEvent .exercice a .titreDefi h3 {
+  margin: 0;
+  margin-left: 20px;
+}
+
+#notesPubliques {
+  display: flex;
+  flex-direction: column;
+}
+#notesPubliques #switch {
+  width: 334px;
+  display: flex;
+  border-radius: 20px;
+  background-color: white;
+}
+#notesPubliques #switch #boutonPerso {
+  width: 167px;
+}
+#notesPubliques #switch #boutonPerso h3 {
+  display: flex;
+  justify-content: center;
+  color: black;
+}
+#notesPubliques #switch #boutonPublique {
+  width: 167px;
+  border-radius: 20px;
+  background-color: #5EBAC8;
+}
+#notesPubliques #switch #boutonPublique h3 {
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+#notesPubliques > div {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 1260px;
+}
+#notesPubliques > div .rang1 {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+#notesPubliques > div .rang1 .photoNote {
+  width: 293px;
+}
+#notesPubliques > div .rang1 > div {
+  background-color: #3C8E9A;
+}
+
+/*# sourceMappingURL=main.css.map */

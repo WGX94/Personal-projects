@@ -1,0 +1,74 @@
+#header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding:0 10px;
+    align-items: center;
+    @extend %flex-center;
+    background-color: $headerColor;
+    box-shadow: 0 4px 4px 0 $shadowColor;
+    z-index: 1;
+
+    div {
+        @extend %flex-center;
+    }
+
+    #headerRight {
+        width: 800px;
+        @extend %flex-spacebetween;
+        
+
+            .borderRight {
+                border-right: 1px solid $borderColor;
+                padding-right: 30px;
+                height: 30px;
+            }
+
+            #cliquable :hover {
+                color: $hoverColor;
+
+            }
+
+            #iconMessage {
+                align-items: center;
+            }
+
+            #faq {
+                padding-left: 5px;
+                text-decoration: none;
+                text-transform: none;
+                font-family: 'Yantramanav', sans-serif;
+                color: $textColor
+            }
+
+            a {
+                align-items: center;
+            }
+
+        .borderRight span {
+            font-family: 'Yantramanav', sans-serif;
+        }
+
+        #barreProgression {
+            width: 30px;
+            height: 30px;
+            border: 2px solid $cercleColor;
+            border-radius: 50%;
+            padding: 5px 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $percentColor;
+        }
+        
+            .menuHorizontal ul {
+                width: 150px;
+                padding-left: 0;
+                margin-right: 20px;
+                @extend %flex-center;
+                list-style: none;
+        }  
+    }   
+}
+

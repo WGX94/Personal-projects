@@ -1,0 +1,115 @@
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: $noir;
+    width: 100%;
+    height: 138px;
+
+    #container {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 110px;
+        padding-top: 1.62%;
+
+    }
+
+        #menuLeft {
+            display: flex;
+            flex-direction: row;
+            width: 300px;
+
+            #reseaux {
+                height: auto;
+            
+                .liens {
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: row;
+                    width: 220px;
+                    align-items: center;
+                    margin: 0;
+                    padding: 0;
+
+                    >li {
+                        height: 22px;
+                        display: flex;
+                        align-items: center;
+
+                        >a {
+                            height: 22px;
+                            display: flex;
+                            align-items: center;
+                        
+
+                            .images {
+                                width: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            #kids {
+                height: 22px; 
+                width: 80px;
+                display: flex;
+                justify-content: center;
+                border-left: 1px solid $separation;
+
+                
+
+                
+
+                    >a {
+                        display: flex;
+                        align-items: center;
+                    }
+
+                }
+
+            }
+
+        }
+
+        #logo {
+            
+        }
+
+        #menuRight {
+            width: 300px;
+            display: flex;
+            justify-content: space-between;
+
+            .compte {
+                display: flex;
+                justify-content: space-between;
+                flex-direction: row;
+                width: 300px;
+
+                >li {
+                    height: 22px;
+                    display: flex;
+                    align-items: center;
+
+                
+                    >a {
+                        text-decoration: none;
+                        color: $blanc;
+                        display: flex;
+                        align-items: center;
+
+                        .images {
+                            width: 20px;
+                        }
+                    }
+
+                } 
+
+            
+            }
+        
+
+
+
+}

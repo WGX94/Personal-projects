@@ -1,0 +1,238 @@
+#containerHome {
+    height: 100%;
+    width: 100vw;
+
+    #background {
+        height: 100vh;
+        background-color: black;
+        position: relative;
+
+        #title {
+            position: absolute;
+            color: white;
+            top: 30%;
+            left: 5%;
+            font-size: 80px;
+            width: 50%;
+            font-weight: bold;
+                
+        }
+
+        #scrollTo {
+            position: absolute;
+            width: 3%;
+            left: 48%;
+            top: 93%;
+            z-index: 1;
+            cursor: pointer;
+        }
+
+        #video {
+            width: 100vw;
+
+            
+        }
+    }
+
+    #destroyerInfo {
+        height: 100vh;
+        position: relative;
+        display: flex;
+        
+
+        #destroyerImage {
+            padding-left: 5%;
+            width: 50%;
+            padding-top: 10%;
+
+            img {
+                width: 100%;
+
+            }
+
+            #length {
+                
+                color: black;
+                height: 5px;
+                background-color: black;
+                display: flex;
+                justify-content: center;
+
+                span {
+                    font-size: 50px;
+                }
+                
+            }
+        }
+
+        #infos {
+            height: 100%;
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            #descriptifDestroyer {
+                border-radius: 20px;
+                height: 80%;
+                width: 80%;
+
+                #title {
+                    height: 15%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 35px;
+                    font-weight: 800;
+
+                }
+
+                #primaryInfos {
+                    height: 85%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+
+
+
+
+                    .iconInfos {
+                        border-radius: 20px;
+                        color: white;
+                        padding-left: 20px;
+                        height: 18%;
+                        background-color: black;
+                        display: flex;
+                        gap: 130px;
+                        font-size: 45px;
+                        align-items: center;
+
+                        .properties {
+                            width: 20%;
+                            display: flex;
+                            flex-direction: column;
+                            text-align: center;
+                            align-items: center;
+
+                            img {
+                                width: 60px;
+                            }
+
+                            .text {
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }                
+            }
+        }
+    }
+
+    #blocks {
+        height: 1452px;
+        width: 100vw;
+        display: flex;
+        
+
+        #left {
+            bottom: 5%;
+            position: relative;
+            height: 100%;
+            width: 50%;
+
+            .productsLeft {
+                height: 50%;
+
+                #tie {
+                    top: 40%;
+                }
+
+                #atAt {
+                    top: 90%;
+                }
+
+                .descriptifImage {
+                    margin-left: 10%; 
+                    color: white;
+                    height: 50px;
+                    position: absolute;
+
+                    .titleImg{
+                        font-size: 50px;
+                    }
+
+                    .imageContainer {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+
+                        img {
+                            width: 20px;
+                        }
+
+                    }
+                }
+            }
+        }
+
+        #right {
+            position: relative;
+            height: 100%;
+            width: 50%;
+            background-color: aquamarine;
+
+            .productsRight {
+                height: 50%;
+
+                #falcon {
+                    top: 40%;
+                }
+
+                #atSt {
+                    top: 90%;
+                    
+                }
+
+                .descriptifImage {
+                    margin-left: 10%;
+                    color: white;
+                    height: 50px;
+                    position: absolute;
+
+                    .titleImg{
+                        font-size: 50px;
+                    }
+
+                    .imageContainer {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+
+                        img {
+                            width: 20px;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+
+    #titleLocalisation {
+        height: 335px;
+        display: flex;
+        align-items: center;
+        padding-left: 5%;
+
+        span {
+            font-size: 50px;
+            width: 40%;
+            
+        }
+        
+    }
+
+    #infoBase {
+        height: 450px;
+    }
+}
