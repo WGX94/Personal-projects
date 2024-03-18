@@ -1,5 +1,5 @@
 import './setting.scss'
-import SignupForm from '../../components/Forms/forms'
+import SignupForm from '../../components/forms/Forms';
 
 const Setting = () => {
     return (

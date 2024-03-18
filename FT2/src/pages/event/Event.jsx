@@ -20,7 +20,7 @@ import umbrella from '../../assets/icons/umbrella_icon.svg'
 import umbrellaPurple from '../../assets/icons/umbrellaPurple_icon.svg'
 import wind from '../../assets/icons/wind_icon.svg'
 import wind2 from '../../assets/icons/wind2_icon.svg'
-import MyResponsivePie from "../../components/charts/pieChart.jsX";
+//import MyResponsivePie from "../../components/charts/pieChart.jsX";
 import filter from '../../assets/icons/filter_icon.svg'
 import { sum } from "lodash";
 
