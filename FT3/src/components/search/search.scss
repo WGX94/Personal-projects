@@ -1,0 +1,19 @@
+#input {
+    border-radius: 50px;
+    width: 50%;
+    border: 1px solid rgba(0, 69, 92, 0.81);
+    
+
+    #button {
+        border-top-right-radius: 50px;
+        border-bottom-right-radius: 50px;
+        border: none;
+        padding: 0;
+        background: rgba(0, 69, 92, 0.81);
+        height: 40px;
+        width: 30%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

@@ -9,7 +9,7 @@ import ask from '../../../public/assets/ask_Icon.svg'
 import account from '../../../public/assets/account_Icon.svg'
 import command from '../../../public/assets/command_Icon.svg'
 import arrowDown from '../../../public/assets/arrowDown_Icon.svg'
-import LinearWithValueLabel from '../ProgressBar'
+import SimplePopup from '../PopUp'
 
 const Header = () => {
     return (
@@ -23,7 +23,7 @@ const Header = () => {
                     <span>Menu</span>
                 </div>
                 <div id='progressBar'>
-                    <LinearWithValueLabel></LinearWithValueLabel>
+                    <SimplePopup />
                 </div>
                 <div id='name'>
                     <span>AUTOMOBILES GUERIN DU MANS</span>

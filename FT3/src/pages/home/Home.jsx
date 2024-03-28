@@ -6,6 +6,16 @@ import carousel1 from '../../../public/carousel1.png'
 import carousel2 from '../../../public/carousel2.png'
 import carousel3 from '../../../public/carousel3.png'
 import carousel4 from '../../../public/carousel4.png'
+import CustomizedInputBase from '../../components/search/Search';
+import bus from '../../../public/assets/bus_Icon.svg'
+import car from '../../../public/assets/car_Icon.svg'
+import truck from '../../../public/assets/truck_Icon.svg'
+import services from '../../../public/assets/services_Icon.svg'
+import equip from '../../../public/assets/equip_Icon.svg'
+import App from '../../components/prizeWheel/PrizeWheel';
+import WheelComponent from '../../components/prizeWheel2/prizeWheel2';
+import Wheel from '../../components/prizeWheel2/prizeWheel2';
+
 
 const Home = () => {
 
@@ -110,6 +120,45 @@ const Home = () => {
             </div>
             <div id='search'>
                 <div id='primaryBlock'>
+                    <div id='upperBlock'>
+                        <div id='title'>
+                            <span>Recherche</span>
+                            <span>Recherche KBA</span>
+                        </div>
+                        <CustomizedInputBase />
+                    </div>
+                    <div id='blocks'>
+                        <div className='parts'>
+                            <img src={car} alt="" />
+                            <span>Voiture/véhicule utilitaire</span>
+                        </div>
+                        <div className='parts'>
+                            <img src={truck} alt="" />
+                            <span>Voiture/véhicule utilitaire</span>
+                        </div>
+                        <div className='parts'>
+                            <img src={bus} alt="" />
+                            <span>Voiture/véhicule utilitaire</span>
+                        </div>
+                        <div className='parts'>
+                            <img src={equip} alt="" />
+                            <span>Voiture/véhicule utilitaire</span>
+                        </div>
+                        <div className='parts'>
+                            <img src={services} alt="" />
+                            <span>Voiture/véhicule utilitaire</span>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+            <div id='Prize'>
+                <Wheel />
+
+                <div id='front'>
 
                 </div>
 

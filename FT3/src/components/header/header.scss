@@ -4,6 +4,7 @@
     height: 80px;
     position: fixed;
     display: flex;
+    z-index: 1;
 
     #block1 {
         width: 13%;
@@ -93,7 +94,7 @@
             }
 
             span {
-                width: 90px;
+                width: 70px;
                 text-align: center;
                 font-size: 12px;
                 color: white;
