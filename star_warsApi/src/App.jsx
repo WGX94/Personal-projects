@@ -12,6 +12,7 @@ function App() {
     const Layout = () => {
         return ( //Suspense balise
             <div id="container">
+                <Header></Header>
                 <Outlet></Outlet>
                 <Footer></Footer>
             </div>

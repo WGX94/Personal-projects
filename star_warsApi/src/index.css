@@ -16,3 +16,7 @@ body {
   width: 100vw;
   background-color: white;
 }
+
+#container {
+  position: relative;
+}

@@ -6,21 +6,25 @@ import videoBg from "/assets/videoBg.mp4"
 import Header from "../../components/header/Header";
 import Error from "../error/Error";
 import arrowBack from "/assets/arrow_back.svg";
-import at_at from "/public/at_at.svg";
-import at_st from "/public/at_st.svg";
-import tie from "/public/tie.svg";
-import falcon from "/public/falcon.svg";
+import at_at from "/public/at_at.jpg";
+import at_st from "/public/at_st.jpg";
+import tie from "/public/tie.jpg";
+import falcon from "/public/falcon.jpg";
 import destroyer from "/public/destroyer.svg";
-import {Canvas} from "@react-three/fiber";
+import {Canvas, useThree} from "@react-three/fiber";
 import {OrbitControls} from "@react-three/drei";
-import Model from "../../components/Tie";
-import crew from "/assets/crew.svg";
-import hyperspace from "/assets/hyperspace.svg";
-import stock from "/assets/stock.svg";
-import speed from "/assets/speed.svg";
+//import Model from "../../components/Tie";
+import crew from "/assets/stormtrooperIcon.png";
+import hyperspace from "/assets/hyperspaceIcon.png";
+import stock from "/assets/capacityIcon.png";
+import speed from "/assets/speedIcon.png";
 import arrowRight from "/assets/arrowRight.svg";
-import CameraPositionLogger from "../../components/CameraPositionLogger";
-import animate from "../../components/CameraPositionLogger";
+
+
+import destroyerBg from '../../../public/destroyerBg.jpg'
+import shipDest from "../../components/Ship";
+import Model from "../../components/Ship";
+import * as THREE from 'three'
 
 
 const Home = () => {
@@ -84,11 +88,19 @@ const Home = () => {
   
   console.log(dataFalcon)
 
+  function Controls() {
+    const {
+        camera, 
+        gl: { domElement },
+    } = useThree();
+
+    return <OrbitControls args={[camera, domElement]} />;
+  }
+
     return (
         
         <div id="containerHome">
             <div id="background">
-                <Header></Header>
                 {data ?
                 <span id="title">
                     {data.model}
@@ -98,58 +110,59 @@ const Home = () => {
                 <video src={videoBg} autoPlay loop muted id="video">    
                 </video> 
             </div>
-            <div ref={ref} id="destroyerInfo" >
-                <div id="destroyerImage">
-                    <img src={destroyer} alt="" />
-                    <div id="length">
-                        <span>{data && data.length} m</span>
-                    </div>
-                    
+            <div ref={ref} style={{ backgroundImage: `url(${destroyerBg})`, backgroundRepeat: 'no-repeat'}} id="destroyerInfo" >
+                <div id="title">
+                    <span>{data && data.model}</span>
                 </div>
                 <div id="infos">
-                    <div id="descriptifDestroyer">
-                        <div id="title">
-                            <span>{data && data.model}</span>
+                    <div id="destroyerImage">
+                        <Canvas camera={{ position: [900, 200, 600], far: 2000}}>
+                            <OrbitControls enableZoom={false} />
+                            <ambientLight intensity={0.5} />
+                            <directionalLight position={[-2,5,2]}intensity={1} />
+                            <Suspense fallback={null}>
+                                <Model />
+                            </Suspense>
+                        </Canvas> 
+                        <div id="length">
+                            <span>{data && data.length} m</span>
                         </div>
-                        <div id="primaryInfos">
-                            <div className="iconInfos">
-                                <div className="properties">
-                                    <img src={crew} alt="" />
-                                    <span className="text">Equipage</span>
-                                </div>
-                                <span>{data && data.crew}</span> 
+                    </div>           
+                    <div id="primaryInfos">
+                        <div className="iconInfos" id="border">
+                            <div className="properties">
+                                <img src={crew} alt="" />
+                                <span className="text">CREW</span>
                             </div>
-                            <div className="iconInfos">
-                                <div className="properties">
-                                    <img src={stock} alt="" />
-                                    <span className="text">Capacité</span>
-                                </div>
-                                <span>{data && data.cargo_capacity}</span> 
-                            </div>
-                            <div className="iconInfos">
-                                <div className="properties">
-                                    <img src={hyperspace} alt="" />
-                                    <span className="text">Hyperespace</span>
-                                </div>
-                                <span>{data && data.max_atmosphering_speed}</span> 
-                            </div>
-                            <div className="iconInfos">
-                                <div className="properties">
-                                    <img src={speed} alt="" />
-                                    <span className="text">Vitesse</span>
-                                </div>
-                                <span>{data && data.MGLT}</span> 
-                            </div>
+                            <span>{data && data.crew}</span> 
                         </div>
-
+                        <div className="iconInfos" id="border2">
+                            <div className="properties">
+                                <img src={stock} alt="" />
+                                <span className="text">CAPACITY</span>
+                            </div>
+                            <span>{data && data.cargo_capacity}</span> 
+                        </div>
+                        <div className="iconInfos" id="border3">
+                            <div className="properties">
+                                <img src={hyperspace} alt="" />
+                                <span className="text">HYPERSPACE</span>
+                            </div>
+                            <span>{data && data.max_atmosphering_speed}</span> 
+                        </div>
+                        <div className="iconInfos">
+                            <div className="properties">
+                                <img src={speed} alt="" />
+                                <span className="text">SPEED</span>
+                            </div>
+                            <span>{data && data.MGLT}</span> 
+                        </div>
                     </div>
-
                 </div>
-                   
             </div>
             <div id="blocks">
                 <div id="left">
-                    <div style={{ backgroundImage: `url(${tie})`, backgroundRepeat: 'no-repeat'}} className="productsLeft" >
+                    <div style={{ backgroundImage: `url(${tie})`, backgroundRepeat: 'no-repeat' }} className="productsLeft" >
                         <div className="descriptifImage" id="tie">
                             <span className="titleImg">{dataTie && dataTie.name}</span>      
                             <div className="imageContainer">
@@ -197,11 +210,10 @@ const Home = () => {
             <div id="infoBase">
             <Canvas>
                 <OrbitControls enableZoom={true} />
-                <CameraPositionLogger event='mousedown' />
                 <ambientLight intensity={0.5} />
                 <directionalLight position={[-2,5,2]}intensity={1} />
                 <Suspense fallback={null}>
-                    <Model />
+                    
                 </Suspense>
             </Canvas>       
             </div>   
