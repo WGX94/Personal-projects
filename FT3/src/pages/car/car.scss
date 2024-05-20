@@ -1,0 +1,292 @@
+#carContainer{
+    padding-top: 70px;
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#block1 {
+    display: flex;
+    justify-content: space-around;
+    height: 44.5%;
+   
+}
+
+
+#img {
+    position: inherit;
+    width: 44.5%;
+
+}
+
+#photo {
+    width: 100%;
+}
+
+#infoPeugeot {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 34%;
+
+}
+
+#title {
+    color: #FFF;
+    font-family: Outfit;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+
+}
+
+#score {
+    color: #FFF;
+    font-family: Outfit;
+    font-size: 16.396px;
+    font-style: normal;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    height: 32px;
+
+}
+
+#blueScore {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--histogramme-vendus, #00116A);
+
+}
+
+
+
+#analyse {
+    color: white;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.stat {
+    display: flex;
+    justify-content: space-between;
+    height: 12%;
+    
+    align-items: center;
+}
+
+#line1 {
+    height: 100%;
+    width: 35%;
+    background-color: #00116A;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#line2 {
+    height: 100%;
+    width: 10%;
+    background-color: #00116A;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#line3 {
+    height: 100%;
+    width: 5%;
+    background-color: #00116A;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#line4 {
+    height: 100%;
+    width: 6%;
+    background-color: #00116A;
+    border-radius: 100px;
+
+}
+
+#line5 {
+    height: 100%;
+    width: 6%;
+    background-color: #00116A;
+    border-radius: 100px;
+
+}
+
+#required {
+    color: #FFF;
+    display: flex;
+    justify-content: space-between;
+}
+
+.roll {
+    display: flex;
+    justify-content: space-between;
+    width: 29%;
+
+}
+
+#blue1 {
+    background-color: #00116A;
+    height: 100%;
+    width: 13%;
+    border-radius: 50px;
+}
+
+#blue2 {
+    background-color: #0063AE;
+    height: 100%;
+    width: 13%;
+    border-radius: 50px;
+    
+}
+
+#blue3 {
+    background-color: #78B1FF;
+    height: 100%;
+    width: 13%;
+    border-radius: 50px;
+}
+
+
+/*Block du bas */
+
+#block2 {
+    height: 41%;
+    padding: 2% 0% 1% 5%;
+    display: flex;
+}
+
+#characteristics {
+    width: 37%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.title2 {
+    color: #FFF;
+    
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 800;
+}
+
+#infos {
+    height: 70%;
+
+}
+
+
+.details {
+    height: 12%;
+}
+
+.part1 {
+    color: #FFF;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%; 
+
+}
+
+.part2 {
+    font-size: 18px;
+}
+
+
+#textGreen {
+    color: #00A84B;
+    font-size: 18px;
+
+}
+
+#price {
+    height: 3%;
+}
+
+#price1 {
+    color: #FFF;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 300;
+}
+
+#price2 {
+    color: #FFF;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: bolder;
+    
+}
+
+
+#strenghtsBlock {
+    height: 100%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20%;
+}
+
+
+
+#icon {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+    height: 100%;
+    width: 50%;
+}
+
+.icons {
+    height: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+#bluetooth {
+    width: 78px;
+
+}
+
+#ac {
+    width: 78px;
+    
+}
+
+#eco { 
+    width: 78px;
+    
+}
+
+.align {
+    display: flex;
+    justify-content: center;
+
+}
+

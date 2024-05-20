@@ -17,10 +17,10 @@ export default function SimplePopup() {
   return (
     <div>
       <Button aria-describedby={id} type="button" onClick={handleClick}>
-        Toggle Popup
+        Roue des récompenses
       </Button>
       <BasePopup id={id} open={open} anchor={anchor}>
-        <PopupBody>The content of the Popup.
+        <PopupBody>
             <App />
         </PopupBody>
       </BasePopup>
@@ -42,17 +42,17 @@ const grey = {
 };
 
 const blue = {
-  200: '#99CCFF',
-  300: '#66B2FF',
-  400: '#3399FF',
-  500: '#007FFF',
-  600: '#0072E5',
-  700: '#0066CC',
+  200: 'rgba(20, 95, 120, 1)',
+  300: 'rgba(20, 95, 120, 1)',
+  400: 'rgba(20, 95, 120, 1)',
+  500: 'rgba(20, 95, 120, 1)',
+  600: 'rgba(20, 95, 120, 1)',
+  700: 'rgba(20, 95, 120, 1)',
 };
 
 const PopupBody = styled('div')(
   ({ theme }) => `
-  width: 165%;
+  width: 130%;
   height: 500px;
   padding: 12px 16px;
   margin: 30px 150px;
@@ -85,7 +85,7 @@ const Button = styled('button')(
   cursor: pointer;
   border: 1px solid ${blue[500]};
   box-shadow: 0 2px 4px ${
-    theme.palette.mode === 'dark' ? 'rgba(0, 0, 0, 0.5)' : 'rgba(0, 127, 255, 0.5)'
+    theme.palette.mode === 'dark' ? 'rgba(20, 95, 120, 1)' : 'rgba(20, 95, 120, 1)'
   }, inset 0 1.5px 1px ${blue[400]}, inset 0 -2px 1px ${blue[600]};
 
   &:hover {

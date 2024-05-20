@@ -1,0 +1,31 @@
+
+
+
+.headContainer {
+    height: 200px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5% 2%;
+    border-bottom: 1px solid rgba(105, 105, 105, 0.30);
+
+
+    h2 {
+        margin: 0;
+        color: var(--Color, #FFF);
+        font-family: "Techna Sans";
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+}
+.mainContainer {
+    background-color: black;
+    height: 600px;
+}
+
+       

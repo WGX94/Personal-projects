@@ -19,13 +19,14 @@ import hyperspace from "/assets/hyperspaceIcon.png";
 import stock from "/assets/capacityIcon.png";
 import speed from "/assets/speedIcon.png";
 import arrowRight from "/assets/arrowRight.svg";
-
+import turnIcon from "/assets/360.png"
 
 import destroyerBg from '../../../public/destroyerBg.jpg'
 import shipDest from "../../components/Ship";
 import Model from "../../components/Ship";
+import Tie from "../../components/Tie";
 import * as THREE from 'three'
-
+import VideoComponent from "../../components/Video";
 
 const Home = () => {
     const [data, setData] = useState(null);
@@ -88,11 +89,24 @@ const Home = () => {
   
   console.log(dataFalcon)
 
+  const [dataInterceptor, setDataInterceptor] = useState(null);
+
+  useEffect(() => {
+    fetch('https://www.swapi.tech/api/vehicles/26')
+      .then(response => response.json())
+      .then(json => setDataInterceptor(json.result.properties))
+      .catch(error => console.error(error));
+  }, []);
+  
+  console.log(dataInterceptor)
+
   function Controls() {
     const {
         camera, 
         gl: { domElement },
     } = useThree();
+
+
 
     return <OrbitControls args={[camera, domElement]} />;
   }
@@ -107,8 +121,10 @@ const Home = () => {
                 </span>
                 :'Loading...'}
                 <img src={arrowBack} alt="" id="scrollTo" onClick={handleClick} />
+               
                 <video src={videoBg} autoPlay loop muted id="video">    
-                </video> 
+                </video>
+                
             </div>
             <div ref={ref} style={{ backgroundImage: `url(${destroyerBg})`, backgroundRepeat: 'no-repeat'}} id="destroyerInfo" >
                 <div id="title">
@@ -124,9 +140,7 @@ const Home = () => {
                                 <Model />
                             </Suspense>
                         </Canvas> 
-                        <div id="length">
-                            <span>{data && data.length} m</span>
-                        </div>
+                        
                     </div>           
                     <div id="primaryInfos">
                         <div className="iconInfos" id="border">
@@ -162,7 +176,7 @@ const Home = () => {
             </div>
             <div id="blocks">
                 <div id="left">
-                    <div style={{ backgroundImage: `url(${tie})`, backgroundRepeat: 'no-repeat' }} className="productsLeft" >
+                    <button style={{ backgroundImage: `url(${tie})`, backgroundRepeat: 'no-repeat' }} className="productsLeft" >
                         <div className="descriptifImage" id="tie">
                             <span className="titleImg">{dataTie && dataTie.name}</span>      
                             <div className="imageContainer">
@@ -170,8 +184,8 @@ const Home = () => {
                                 <span>Découvrir</span>
                             </div>
                         </div>
-                    </div>
-                    <div style={{ backgroundImage: `url(${at_at})`, backgroundRepeat: 'no-repeat'}} className="productsLeft">
+                    </button>
+                    <button style={{ backgroundImage: `url(${at_at})`, backgroundRepeat: 'no-repeat'}} className="productsLeft">
                         <div className="descriptifImage" id="atAt">
                             <span className="titleImg">{dataAtAt && dataAtAt.name}</span>      
                             <div className="imageContainer">
@@ -179,10 +193,10 @@ const Home = () => {
                                 <span>Découvrir</span>
                             </div>
                         </div>
-                    </div>
+                    </button>
                 </div>
                 <div id="right">
-                    <div style={{ backgroundImage: `url(${falcon})`, backgroundRepeat: 'no-repeat'}} className="productsRight">
+                    <button style={{ backgroundImage: `url(${falcon})`, backgroundRepeat: 'no-repeat'}} className="productsRight">
                         <div className="descriptifImage" id="falcon">
                             <span className="titleImg">{dataFalcon && dataFalcon.name}</span>      
                             <div className="imageContainer">
@@ -190,8 +204,8 @@ const Home = () => {
                                 <span>Découvrir</span>
                             </div>
                         </div>
-                    </div>
-                    <div style={{ backgroundImage: `url(${at_st})`, backgroundRepeat: 'no-repeat'}} className="productsRight">
+                    </button>
+                    <button style={{ backgroundImage: `url(${at_st})`, backgroundRepeat: 'no-repeat'}} className="productsRight">
                         <div className="descriptifImage" id="atSt">
                             <span className="titleImg">{dataAtSt && dataAtSt.name}</span>      
                             <div className="imageContainer">
@@ -199,24 +213,33 @@ const Home = () => {
                                 <span>Découvrir</span>
                             </div>
                         </div>
-
-                    </div>
+                    </button>
                 </div>
+            </div>
+            
+            <div id="infoBase">
+                <div id="nameShip">
+                    <span>{dataInterceptor && dataInterceptor.name}</span>
+                    <img src={turnIcon} alt="" />
+                
+                </div>
+                <div id="model3d">
+                    <Canvas camera={{ position: [0, 0, 11], far: 2000}}>
+                        <OrbitControls enableZoom={false} />
+                        <ambientLight intensity={0.5} />
+                        <directionalLight position={[-2,5,2]}intensity={1} />
+                        <Suspense fallback={null}>
+                            <Tie />
+                        </Suspense>
+                    </Canvas> 
+
+                </div>
+                   
             </div>
             <div id="titleLocalisation">
                 <span>Découvrez la localisation de notre prochain site</span>
             </div>
-            <App></App>
-            <div id="infoBase">
-            <Canvas>
-                <OrbitControls enableZoom={true} />
-                <ambientLight intensity={0.5} />
-                <directionalLight position={[-2,5,2]}intensity={1} />
-                <Suspense fallback={null}>
-                    
-                </Suspense>
-            </Canvas>       
-            </div>   
+            <App></App> 
         </div>
     
     )
@@ -224,5 +247,8 @@ const Home = () => {
 
 export default Home
 
-
-                    
+/*
+<div id="length">
+                            <span>{data && data.length} m</span>
+                        </div>
+*/

@@ -5,6 +5,7 @@
   }
 
   #wheel {
+    
     position: relative;
   }
 
@@ -29,6 +30,8 @@
   
   #spin:focus, #reset:focus {
     outline:none;
+    position: absolute;
+
   }
   
   /* #reset {
@@ -43,6 +46,7 @@
   }
   
   #result{
+    
     font-size: 50px;
     color: rgb(0, 180, 120);
   }
@@ -50,3 +54,15 @@
   input {
     font-size: 16px;
   }
+
+  #selector {
+    position: absolute;
+    right: 60px;
+    z-index: 2;
+
+  }
+
+  #readout {
+  }
+
+  

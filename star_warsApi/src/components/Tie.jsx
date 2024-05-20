@@ -10,7 +10,7 @@ Title: Star Wars: TIE/in Interceptor
 import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
-export default function Model(props) {
+export default function Tie(props) {
   const { nodes, materials } = useGLTF('/tie.gltf')
   return (
     <group {...props} dispose={null}>

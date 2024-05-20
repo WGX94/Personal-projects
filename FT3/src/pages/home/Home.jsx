@@ -15,9 +15,22 @@ import equip from '../../../public/assets/equip_Icon.svg'
 import App from '../../components/prizeWheel/PrizeWheel';
 import WheelComponent from '../../components/prizeWheel2/prizeWheel2';
 import Wheel from '../../components/prizeWheel2/prizeWheel2';
+import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom'
 
 
 const Home = () => {
+
+    const [userData, setUserData] = useState({ name: '', email: ''});
+
+    useEffect(() => {
+        const storedName = localStorage.getItem('user_name');
+        const storedEmail = localStorage.getItem('user_email');
+
+        if (storedName && storedEmail) {
+        setUserData({ name: storedName, email: storedEmail });
+        }
+    }, []);
 
     const responsive = {
         superLargeDesktop: {
@@ -43,10 +56,10 @@ const Home = () => {
         <div id="homeContainer">
             <div id='head'>
                 <div id='text1'>
-                    <span>Promos</span>
+                    <span >Bienvenue</span>
                 </div>
                 <div id='text2'>
-                    <span>News</span>
+                    <span style={{color: 'rgba(20, 95, 120, 1)', fontWeight: 'bold', fontSize: '25px'}}>{userData.name}</span>
                 </div>
             </div>
             <div id='scroll'>
@@ -105,7 +118,10 @@ const Home = () => {
                 swipeable
                 >
                     <div className='carousel'>
-                        <img src={carousel1} alt="" />
+                        <Link to='/peugeot308'>
+                            <img src={carousel1} alt="" />
+                        </Link>
+                       
                     </div>
                     <div className='carousel'>
                         <img src={carousel2} alt="" />
@@ -151,14 +167,6 @@ const Home = () => {
 
                     </div>
 
-
-                </div>
-
-            </div>
-            <div id='Prize'>
-                <Wheel />
-
-                <div id='front'>
 
                 </div>
 

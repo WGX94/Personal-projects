@@ -1,5 +1,5 @@
 import './header.scss'
-import logo from '../../../public/logoSekurit.svg'
+import logo from '../../../public/logoSekurit.png'
 import menu from '../../../public/assets/menu_Icon.svg'
 import shop from '../../../public/assets/shop_Icon.svg'
 import returnIcon from '../../../public/assets/return_Icon.svg'
@@ -10,6 +10,8 @@ import account from '../../../public/assets/account_Icon.svg'
 import command from '../../../public/assets/command_Icon.svg'
 import arrowDown from '../../../public/assets/arrowDown_Icon.svg'
 import SimplePopup from '../PopUp'
+import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Header = () => {
     return (
@@ -19,8 +21,10 @@ const Header = () => {
             </div>
             <div id='block2'>
                 <div className='linkPage'>
-                    <img src={menu} alt="" />
-                    <span>Menu</span>
+                    <Link to='/' style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '5px', textDecoration: 'none'}}>
+                        <img src={menu} alt="" />
+                        <span>Menu</span>
+                    </Link>
                 </div>
                 <div id='progressBar'>
                     <SimplePopup />
@@ -32,8 +36,10 @@ const Header = () => {
             </div>
             <ul id='block3'>
                 <li className='linkPage'>
-                    <img src={account} alt="" />
-                    <span>Mon Compte</span>
+                    <Link to='/moncompte'  style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '5px', textDecoration: 'none'}}>
+                        <img src={account} alt="" />
+                        <span>Mon Compte</span>
+                    </Link>
                 </li>
                 <li className='linkPage'>
                     <img src={returnIcon} alt="" />

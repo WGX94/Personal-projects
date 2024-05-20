@@ -6,15 +6,15 @@ import "./prizeWheel.scss";
 class App extends React.Component {
   state = {
     list: [
-      "$100",
-      "$500",
-      "$9,999",
-      "$1",
-      "$60",
-      "$1,000",
-      "$4.44",
-      "$0",
-      "$333",
+      "5%",
+      "Casquette",
+      "T-shirt",
+      "10%",
+      "Badge",
+      "Visite",
+      "15%",
+      "Pull",
+      "20%",
     ],
     // list: ["$100", "$500", "$9,999", "$1", "$60", "$1,000", "$4.44"],
     // list: ["$100","$500","$9,999","$1","$60"],
@@ -181,36 +181,35 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <h1>Spinning Prize Wheel React</h1>
+        <h1 style={{zIndex: '2'}}>Roue des récompenses</h1>
         <span id="selector">&#9660;</span>
         <canvas
           id="wheel"
           width="700"
           height="700"
-          style={{
+          style={{backgroundColor: 'white',
             WebkitTransform: `rotate(${this.state.rotate}deg)`,
             WebkitTransition: `-webkit-transform ${
               this.state.easeOut
             }s ease-out`
           }}
           >
-            <img src={wheel} alt="" id=""/>
           </canvas>
         
         
 
         {this.state.spinning ? (
           <button type="button" id="reset" onClick={this.reset}>
-            reset
+            Tourner à nouveau
           </button>
         ) : (
           <button type="button" id="spin" onClick={this.spin}>
-            spin
+            Tourner
           </button>
         )}
         <div class="display">
-          <span id="readout">
-            YOU WON:{"  "}
+          <span id="readout" style={{zIndex: '2'}}>
+            Vous avez gagné:{"  "}
             <span id="result">{this.state.list[this.state.result]}</span>
           </span>
         </div>
